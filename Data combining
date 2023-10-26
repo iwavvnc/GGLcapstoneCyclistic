@@ -1,0 +1,13 @@
+oct22raw <- read.table("C:/Users/User/OneDrive/Documentos/202210-divvy-tripdata.csv", header = TRUE, sep = ',')
+nov22raw <- read.table("C:/Users/User/OneDrive/Documentos/202211-divvy-tripdata.csv", header = TRUE, sep = ',')
+dec22raw <- read.table("C:/Users/User/OneDrive/Documentos/202212-divvy-tripdata.csv", header = TRUE, sep = ',')
+jan23raw <- read.table("C:/Users/User/OneDrive/Documentos/202301-divvy-tripdata.csv", header = TRUE, sep = ',')
+feb23raw <- read.table("C:/Users/User/OneDrive/Documentos/202302-divvy-tripdata.csv", header = TRUE, sep = ',')
+mar23raw <- read.table("C:/Users/User/OneDrive/Documentos/202303-divvy-tripdata.csv", header = TRUE, sep = ',')
+apr23raw <- read.table("C:/Users/User/OneDrive/Documentos/202304-divvy-tripdata.csv", header = TRUE, sep = ',')
+may23raw <- read.table("C:/Users/User/OneDrive/Documentos/202305-divvy-tripdata.csv", header = TRUE, sep = ',')
+jun23raw <- read.table("C:/Users/User/OneDrive/Documentos/202306-divvy-tripdata.csv", header = TRUE, sep = ',')
+jul23raw <- read.table("C:/Users/User/OneDrive/Documentos/202307-divvy-tripdata.csv", header = TRUE, sep = ',')
+aug23raw <- read.table("C:/Users/User/OneDrive/Documentos/202308-divvy-tripdata.csv", header = TRUE, sep = ',')
+sep23raw <- read.table("C:/Users/User/OneDrive/Documentos/202309-divvy-tripdata.csv", header = TRUE, sep = ',')
+yeardata <- rbind(oct22raw, nov22raw, dec22raw, jan23raw, feb23raw, mar23raw, apr23raw, may23raw, jun23raw, jul23raw, aug23raw, sep23raw) #Combining data into one variable
