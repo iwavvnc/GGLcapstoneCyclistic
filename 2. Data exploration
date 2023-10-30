@@ -1,0 +1,18 @@
+str(yeardata) #overview of dataframe
+sum(is.na(yeardata)) #number of NAs
+colSums(is.na(yeardata)) #which columns contain NAs
+sum(duplicated(yeardata$ride_id)) #number of duplicates
+table(yeardata$rideable_type) #number of occurencies in a column
+class(yeardata$started_at)
+class(yeardata$ended_at)
+yeardata <- yeardata %>%
+  mutate(started_at = as_datetime(started_at)) %>%
+  mutate(ended_at = as_datetime(ended_at)) #change type of variable
+class(yeardata$started_at)
+yeardata <- yeardata %>%
+  mutate(duration = difftime(ended_at, started_at, units = "mins")) #create new column
+yeardata <- yeardata %>%
+  mutate(duration = as.numeric(duration))
+table(yeardata$member_casual)
+yeardata <- subset(yeardata, select = -start_station_id) #remove unused columns
+yeardata <- subset(yeardata, select = -end_station_id)
