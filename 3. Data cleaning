@@ -1,0 +1,7 @@
+#Data cleaning
+yeardata <- drop_na(yeardata) #clean missing values
+colSums(is.na(yeardata))
+yeardata <- filter(yeardata, duration > 1) #filter unsufficiant observations
+yeardata <- filter(yeardata, duration < 1440)
+yeardata <- yeardata %>%
+  mutate(month = month(yeardata$started_at)) #added month column
